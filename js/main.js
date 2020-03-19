@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const date = new Date(Date.parse(item.depart_date)).toLocaleDateString("ru", {
               day: 'numeric', month: 'long', year: 'numeric',
             });
-            const bilet = `Билет из Екатеринбурга в Калининград на ${date} по цене ${item.value}р.`;
+            const bilet = `Билет из Екатеринбурга в Калининград на ${date} по цене ${item.value}р. Купить в компании ${item.gate}`;
             console.log(bilet);
           });
   });
