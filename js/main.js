@@ -44,6 +44,7 @@ document.addEventListener('DOMContentLoaded', function () {
       cheapestTicket.style.display = 'none';
       otherCheapTickets.style.display = 'none';
       cheapestTicket.style.color = 'white';
+      cheapestTicket.classList.remove('ticket');
 
       const filterCity = city.filter((item) => {
         const fixItem = item.name.toLowerCase();
@@ -217,12 +218,14 @@ document.addEventListener('DOMContentLoaded', function () {
       }, error => {
         cheapestTicket.style.display = 'block';
         cheapestTicket.style.color = 'red';
+        cheapestTicket.classList.add('ticket');
         cheapestTicket.innerHTML = '<h2 class ="error">В этом направлении нет рейсов!</h2>';
         console.error('Ошибка', error);
       });
     } else {
       cheapestTicket.style.display = 'block';
       cheapestTicket.style.color = 'red';
+      cheapestTicket.classList.add('ticket');
       cheapestTicket.innerHTML = '<h2 class ="error">Введите корректное название города!</h2>';
     }
 
