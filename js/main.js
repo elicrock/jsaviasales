@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', function () {
     return link;
   };
 
-  const createCard = (data) => {  // Выводим найденные билеты
+  const createCard = (data) => { // Выводим найденные билеты
     const ticket = document.createElement('article');
     ticket.classList.add('ticket');
 
@@ -155,7 +155,7 @@ document.addEventListener('DOMContentLoaded', function () {
     cheapestTicket.append(ticket);
   };
 
-  const renderCheapYear = (cheapTickets) => {  // Выводим самые дешевые билеты на другие даты
+  const renderCheapYear = (cheapTickets) => { // Выводим самые дешевые билеты на другие даты
     otherCheapTickets.style.display = 'block';
     otherCheapTickets.innerHTML = '<h2>Самые дешевые билеты на другие даты</h2>';
 
@@ -232,7 +232,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const target = event.target;
     if (target !== formSearch || target === document.body.main) {
       dropdownCitiesFrom.innerHTML = '';
-	    dropdownCitiesTo.innerHTML = '';
+      dropdownCitiesTo.innerHTML = '';
     }
   });
 
