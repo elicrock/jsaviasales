@@ -228,8 +228,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
   });
 
-  document.body.addEventListener('click', () => {
-
+  document.body.addEventListener('click', (event) => {
+    const target = event.target;
+    if (target !== formSearch || target === document.body.main) {
+      dropdownCitiesFrom.innerHTML = '';
+	    dropdownCitiesTo.innerHTML = '';
+    }
   });
 
   // Вызовы функций
