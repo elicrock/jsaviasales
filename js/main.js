@@ -102,12 +102,12 @@ document.addEventListener('DOMContentLoaded', function () {
     const month = date.getMonth() + 1;
     link += month < 10 ? '0' + month : month;
     link += data.destination;
-    link += '1';
+    link += '1'; // 1 взрослый билет
 
     return link;
   };
 
-  const createCard = (data) => {
+  const createCard = (data) => {  // Выводим найденные билеты
     const ticket = document.createElement('article');
     ticket.classList.add('ticket');
 
@@ -155,7 +155,7 @@ document.addEventListener('DOMContentLoaded', function () {
     cheapestTicket.append(ticket);
   };
 
-  const renderCheapYear = (cheapTickets) => {
+  const renderCheapYear = (cheapTickets) => {  // Выводим самые дешевые билеты на другие даты
     otherCheapTickets.style.display = 'block';
     otherCheapTickets.innerHTML = '<h2>Самые дешевые билеты на другие даты</h2>';
 
